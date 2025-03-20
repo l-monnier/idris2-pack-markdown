@@ -1,12 +1,12 @@
-module Markdown.Lexer
+module Text.Markdown.Lexer
 
 import Data.List1
 
 import Text.Lexer
 import Text.Token
 
-import Markdown.String
-import public Markdown.Tokens
+import Text.Markdown.String
+import public Text.Markdown.Tokens
 
 %default total
 
@@ -31,24 +31,24 @@ combineText : List MarkdownToken -> List MarkdownToken
 combineText [] = []
 combineText (el :: rest) =
   let
-    init = (the (List1 MarkdownToken, MarkdownToken) ([el], el))
+    init = (the (List1 MarkdownToken, MarkdownToken) (el ::: [], el))
   in
     toList $ reverse $ fst $ (foldl accumulate init rest)
   where
     accumulate : (List1 MarkdownToken, MarkdownToken) -> MarkdownToken -> (List1 MarkdownToken, MarkdownToken)
-    accumulate (acc0 :: acc1, last) el =
+    accumulate (acc0 ::: acc1, last) el =
       case (last, el) of
         (Tok MdText a, Tok MdText b) =>
           let
             combined = Tok MdText (a ++ b)
           in
-          (combined :: acc1, combined)
+          (combined ::: acc1, combined)
         _ =>
-          (el :: acc0 :: acc1, el)
+          (el ::: acc0 :: acc1, el)
 
 public export
 lexMarkdown : String -> Maybe (List MarkdownToken)
 lexMarkdown str
   = case lex markdownTokenMap str of
-         (tokens, _, _, "") => Just $ combineText $ map TokenData.tok tokens
+         (tokens, _, _, "") => Just $ combineText $ map (\tok => tok.val) tokens
          _ => Nothing

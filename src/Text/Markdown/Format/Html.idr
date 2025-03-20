@@ -1,7 +1,7 @@
-module Markdown.Format.Html
+module Text.Markdown.Format.Html
 
 import Extra.String
-import Markdown.Data
+import Text.Markdown.Data
 
 -- TODO: This probably isn't total
 -- TODO: Make this safe

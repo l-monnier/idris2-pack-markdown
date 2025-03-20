@@ -1,13 +1,15 @@
-module Markdown
+module Text.Markdown
 
-import Markdown.Lexer
-import Markdown.Parser
+import Text.Markdown.Lexer
+import Text.Markdown.Parser
 
-import public Markdown.Data
+import public Text.Markdown.Data
 
+-- TODO: not total at the moment
 %default total
 
 ||| Parse a Markdown string
 export
+partial
 parse : String -> Maybe Markdown
 parse x = parseMarkdown !(lexMarkdown x)

@@ -1,7 +1,7 @@
-module Markdown.Tokens
+module Text.Markdown.Tokens
 
-import Data.Strings
-import Markdown.String
+import Data.String
+import Text.Markdown.String
 import Extra.String
 import public Text.Token
 

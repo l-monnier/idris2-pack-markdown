@@ -1,7 +1,7 @@
-module Markdown.Format.Text
+module Text.Markdown.Format.Text
 
 import Extra.String
-import Markdown.Data
+import Text.Markdown.Data
 
 -- toTextEl : MarkdownEl -> String
 -- toTextEl (Header level text) = "#" ++ text -- TODO: Level

@@ -3,7 +3,7 @@ module Extra.String
 import Data.List
 import Data.List1
 import Data.Maybe
-import Data.Strings
+import Data.String
 import Extra.List
 import Extra.Op
 
@@ -45,7 +45,7 @@ listOp op =
 export
 split : Char -> String -> List String
 split c =
-  ( map pack ) . Data.List1.toList . (Data.List.split (== c)) . unpack
+  ( map pack ) . Prelude.toList . (Data.List.split (== c)) . unpack
 
 export
 includesAny : String -> String -> Bool

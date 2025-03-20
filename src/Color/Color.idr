@@ -1,4 +1,4 @@
-module Color
+module Color.Color
 
 public export
 data Color : Type where

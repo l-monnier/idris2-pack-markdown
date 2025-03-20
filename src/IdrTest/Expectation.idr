@@ -1,6 +1,6 @@
 module IdrTest.Expectation
 
-import Color
+import Color.Color
 
 public export
 Expectation : Type

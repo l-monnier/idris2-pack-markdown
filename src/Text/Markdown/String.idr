@@ -1,4 +1,4 @@
-module Markdown.String
+module Text.Markdown.String
 
 import Data.Nat
 import Text.Lexer

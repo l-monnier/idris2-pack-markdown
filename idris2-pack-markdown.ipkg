@@ -9,4 +9,7 @@ homepage = "https://github.com/l-monnier/idris2-pack-markdown"
 
 modules = Idris2_pack_markdown
 
+depends = base >= 0.6.0
+        , contrib
+
 sourcedir = "src"

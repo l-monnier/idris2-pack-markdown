@@ -1,6 +1,6 @@
-module Markdown.Data
+module Text.Markdown.Data
 
-import Data.Strings
+import Data.String
 import Data.List
 
 import Extra.String
@@ -52,18 +52,22 @@ mutual
   showInline (Html tag inline) = "HTML <" ++ tag ++ "> " ++ (showInlines inline)
 
 export
+partial
 Show Inline where
   show = showInline
 
 export
+partial
 Show Block where
   show = showBlock
 
 export
+partial
 Show Markdown where
   show (Doc blocks) = showBlocks blocks
 
 export
+partial
 Eq Inline where
   (Text text0) == (Text text1) = text0 == text1
   (Pre text0) == (Pre text1) = text0 == text1
@@ -76,11 +80,13 @@ Eq Inline where
   _ == _ = False
 
 export
+partial
 Eq Block where
   (Header level0 inline0) == (Header level1 inline1) = level0 == level1 && inline0 == inline1
   (Paragraph inline0) == (Paragraph inline1) = inline0 == inline1
   _ == _ = False
 
 export
+partial
 Eq Markdown where
   (Doc a) == (Doc b) = a == b
