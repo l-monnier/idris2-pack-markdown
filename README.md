@@ -1,20 +1,30 @@
 ## Markdown
 
-Markdown is a markdown parser and renderer for Idris2.
+Pack Mardown is a fork of [Inigo Markdown](https://github.com/bbarker/inigo/tree/master/Base/Markdown).
+It is a markdown parser and renderer for Idris2.
+
+The library can be installed with [Pack](https://github.com/stefan-hoeck/idris2-pack).
 
 ## Getting Started
 
-Simply add `Base.Markdown=^0.0.1` to `Inigo.toml` and run `inigo prod fetch-deps`.
+The package name is `idris2-pack-markdown`.
+
+To install it from Pack package collection, run:
+
+```sh
+pack install idris2-pack-markdown
+``` 
 
 ## Parsing and Rendering
 
-You can simply run `Markdown.parse` to parse Markdown text:
+You can simply run `parse` to parse Markdown text:
 
 ```haskell
-import Markdown
+import Text.Markdown
 
-> Markdown.parse "# Hello world\n\nHow are _you_?"
-Just Doc
+parse "# Hello world\n\nHow are _you_?"
+
+> Just Doc
 	[ Header 1 [ Text "Hello world" ]
 	, Paragraph [ Text "How are ", Italics "you", Text "?" ]
 	]
@@ -23,9 +33,12 @@ Just Doc
 Then you can render that doc to Html or Text.
 
 ```haskell
-map MarkdownFormat.Html.toHtml $ Markdown.parse "# Hello world\n\nHow are _you_?"
-<h1>Hello world</h1>
-<p>How are <em>you</em>!</p>
+import Text.Markdown
+import Text.Markdown.Format.Html
+
+map toHtml $ parse "# Hello world\n\nHow are _you_?"
+
+> Just "<h1>Hello world</h1>\n<p>How are <em>you</em>!</p>"
 ```
 
 ## Supported Features
