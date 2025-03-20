@@ -1,10 +1,10 @@
-module Test.MarkdownTest
+module MarkdownTest
 
 import IdrTest.Test
 import IdrTest.Expectation
 
-import Markdown.Data
-import Markdown
+import Text.Markdown.Data
+import Text.Markdown
 
 parserSpecs : List (String, String, Maybe Markdown)
 parserSpecs =

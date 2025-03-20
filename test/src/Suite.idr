@@ -1,15 +1,15 @@
-module Test.Suite
+module Suite
 
 import IdrTest.Test
 
-import Test.Markdown.Format.HtmlTest
-import Test.Markdown.LexerTest
-import Test.MarkdownTest
+import Markdown.Format.HtmlTest
+import Markdown.LexerTest
+import MarkdownTest
 
 suite : IO ()
 suite = do
   runSuites
-    [ Test.Markdown.LexerTest.suite
-    , Test.MarkdownTest.suite
-    , Test.Markdown.Format.HtmlTest.suite
+    [ Markdown.LexerTest.suite
+    , MarkdownTest.suite
+    , Markdown.Format.HtmlTest.suite
     ]

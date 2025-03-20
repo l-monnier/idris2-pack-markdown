@@ -1,9 +1,9 @@
-module Test.Markdown.LexerTest
+module Markdown.LexerTest
 
 import IdrTest.Test
 import IdrTest.Expectation
 
-import Markdown.Lexer
+import Text.Markdown.Lexer
 
 lexerSpecs : List (String, String, Maybe (List MarkdownToken))
 lexerSpecs =

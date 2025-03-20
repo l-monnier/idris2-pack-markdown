@@ -7,7 +7,19 @@ brief = "Markdown parser and renderer for Idris2."
 readme = "README.md"
 homepage = "https://github.com/l-monnier/idris2-pack-markdown"
 
-modules = Idris2_pack_markdown
+modules = Text.Markdown
+        , Text.Markdown.Data
+        , Text.Markdown.Lexer
+        , Text.Markdown.Parser
+        , Text.Markdown.String
+        , Text.Markdown.Tokens
+        , Text.Markdown.Format.Html
+        , Color.Color
+        , Extra.List
+        , Extra.Op
+        , Extra.String
+        , IdrTest.Expectation
+        , IdrTest.Test
 
 depends = base >= 0.6.0
         , contrib

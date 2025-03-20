@@ -1,11 +1,11 @@
-module Test.Markdown.Format.HtmlTest
+module Markdown.Format.HtmlTest
 
 import IdrTest.Test
 import IdrTest.Expectation
 
-import Markdown
-import Markdown.Data
-import Markdown.Format.Html
+import Text.Markdown
+import Text.Markdown.Data
+import Text.Markdown.Format.Html
 
 toHtmlSpecs : List (String, Markdown, String)
 toHtmlSpecs =
