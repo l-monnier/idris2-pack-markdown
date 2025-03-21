@@ -14,7 +14,6 @@ modules = Text.Markdown
         , Text.Markdown.String
         , Text.Markdown.Tokens
         , Text.Markdown.Format.Html
-        , Color.Color
         , Extra.List
         , Extra.Op
         , Extra.String

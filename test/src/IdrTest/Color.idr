@@ -1,4 +1,4 @@
-module Color.Color
+module IdrTest.Color
 
 public export
 data Color : Type where
