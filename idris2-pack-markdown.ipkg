@@ -18,8 +18,6 @@ modules = Text.Markdown
         , Extra.List
         , Extra.Op
         , Extra.String
-        , IdrTest.Expectation
-        , IdrTest.Test
 
 depends = base >= 0.6.0
         , contrib
