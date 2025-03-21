@@ -24,7 +24,7 @@ data Decorator : Type where
 export %inline
 (<&>) : Decorator -> Decorator -> Decorator
 (<&>) = Both
-infixr 5 <&>
+export infixr 5 <&>
 
 ctrl : String -> String
 ctrl =
