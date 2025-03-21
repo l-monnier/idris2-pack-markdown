@@ -1,5 +1,5 @@
 package idris2-pack-markdown
-version = 0.0.4
+version = 0.1.0
 authors = "Brandon Elam Barker"
 maintainers = "Leonard Monnier"
 license = "MIT"

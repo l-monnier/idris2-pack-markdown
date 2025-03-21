@@ -60,6 +60,7 @@ There are a lot of features to add and support, so feel free to contribute and i
 
 ## Changelog
 
+* `0.1.0` - Standalone library compatible with Pack
 * `0.0.4` - Fix issues regarding whitespace
 * `0.0.3` - Add support for `pre` and code blocks
 * `0.0.2` - Fix non-HTML brackets
