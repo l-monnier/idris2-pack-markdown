@@ -30,7 +30,7 @@ parse "# Hello world\n\nHow are _you_?"
 	]
 ```
 
-Then you can render that doc to Html or Text.
+Then you can render that doc to Html.
 
 ```haskell
 import Text.Markdown
@@ -60,6 +60,7 @@ There are a lot of features to add and support, so feel free to contribute and i
 
 ## Changelog
 
+* `0.1.1` - Remove the `Text.Markdown.Format.Text` module
 * `0.1.0` - Standalone library compatible with Pack
 * `0.0.4` - Fix issues regarding whitespace
 * `0.0.3` - Add support for `pre` and code blocks
