@@ -5,7 +5,6 @@ import Data.List1
 import Data.Maybe
 import Data.String
 import Extra.List
-import Extra.Op
 
 public export
 join : String -> List String -> String

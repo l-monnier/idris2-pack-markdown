@@ -15,7 +15,6 @@ modules = Text.Markdown
         , Text.Markdown.Tokens
         , Text.Markdown.Format.Html
         , Extra.List
-        , Extra.Op
         , Extra.String
 
 depends = base >= 0.6.0
