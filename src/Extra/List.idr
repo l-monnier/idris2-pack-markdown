@@ -4,26 +4,6 @@ import Data.List
 import Data.Maybe
 
 export
-dropPrefix : Eq a => List a -> List a -> List a
-dropPrefix pre x =
-  if isPrefixOf pre x
-    then drop (length pre) x
-    else x
-
-export
-collapse : Monad t => List (t a) -> t (List a)
-collapse =
-  foldl f (pure [])
-    where
-      fi : t a -> List a -> t (List a)
-      fi el acc =
-        map (\e => e :: acc) el
-
-      f : t (List a) -> t a -> t (List a)
-      f acc el =
-        acc >>= fi el
-
-export
 range : Nat -> List Nat
 range n =
   reverse (drop 1 (iterate next n))
@@ -36,11 +16,6 @@ export
 zipWithIndex : List a -> List (a, Nat)
 zipWithIndex l =
   zip l (range (length l))
-
-export
-repeat : a -> Nat -> List a
-repeat _ Z = []
-repeat x (S n) = x :: repeat x n
 
 export
 findAll : Eq a => List a -> List a -> List Nat
@@ -61,8 +36,6 @@ findAll l k =
                 acc
           in
             findAllHelper (drop 1 l) k (index + 1) nextAcc
-
-
 
 export
 replace : Eq a => List a -> List a -> List a -> List a
