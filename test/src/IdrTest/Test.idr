@@ -3,7 +3,7 @@ module IdrTest.Test
 import Data.List
 import Data.Maybe
 import Data.SortedSet as Set
-import Extra.String
+import Data.String.Extra
 import IdrTest.Expectation
 import System
 
