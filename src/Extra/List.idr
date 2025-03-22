@@ -3,7 +3,7 @@ module Extra.List
 import Data.List
 import Data.Maybe
 
-export
+private
 range : Nat -> List Nat
 range n =
   reverse (drop 1 (iterate next n))
@@ -12,7 +12,7 @@ range n =
       next (S k) = Just k
       next Z = Nothing
 
-export
+private
 zipWithIndex : List a -> List (a, Nat)
 zipWithIndex l =
   zip l (range (length l))
