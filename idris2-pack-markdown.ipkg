@@ -14,8 +14,7 @@ modules = Text.Markdown
         , Text.Markdown.String
         , Text.Markdown.Tokens
         , Text.Markdown.Format.Html
-        , Extra.List
-        , Extra.String
+        , Internal.String
 
 depends = base >= 0.6.0
         , contrib

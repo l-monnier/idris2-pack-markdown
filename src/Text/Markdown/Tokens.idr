@@ -3,8 +3,10 @@ module Text.Markdown.Tokens
 import Data.String
 import Data.String.Extra
 import Text.Markdown.String
-import Extra.String
+import Internal.String
 import public Text.Token
+
+%default total
 
 safeSub : Nat -> Nat -> Nat
 safeSub _ Z = Z
@@ -82,7 +84,7 @@ TokenKind MarkdownTokenKind where
   tokValue MdText txt = txt
   tokValue MdPre txt = dropEnds 1 txt
   tokValue MdCodeBlock txt =
-    case Extra.String.split '\n' (dropEnds 3 txt) of
+    case Internal.String.split '\n' (dropEnds 3 txt) of
       [] =>
         ("", Nothing)
 
@@ -101,6 +103,7 @@ TokenKind MarkdownTokenKind where
   tokValue HtmlCloseTag tag = (filter isAlphaNum tag) -- how to do this?
 
 export
+partial
 Show MarkdownToken where
   show (Tok HeadingSym l) = "HeadingSym " ++ (show l)
   show (Tok MdText txt) = "MdText " ++ (quote txt)

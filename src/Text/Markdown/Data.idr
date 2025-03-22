@@ -3,7 +3,7 @@ module Text.Markdown.Data
 import Data.String
 import Data.List
 
-import Extra.String
+import Internal.String
 
 -- Note: this is currently infinitely recursive
 -- %default total

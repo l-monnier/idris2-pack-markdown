@@ -1,7 +1,7 @@
 module Text.Markdown.Format.Html
 
 import Data.String.Extra
-import Extra.String
+import Internal.String
 import Text.Markdown.Data
 
 -- TODO: This probably isn't total
