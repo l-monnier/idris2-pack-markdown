@@ -1,5 +1,6 @@
 module Text.Markdown.Format.Html
 
+import Data.String.Extra
 import Extra.String
 import Text.Markdown.Data
 
