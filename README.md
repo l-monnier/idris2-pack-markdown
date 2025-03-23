@@ -3,18 +3,6 @@
 Pack Mardown is a fork of [Inigo Markdown](https://github.com/bbarker/inigo/tree/master/Base/Markdown).
 It is a markdown parser and renderer for Idris2.
 
-The library can be installed with [Pack](https://github.com/stefan-hoeck/idris2-pack).
-
-## Getting Started
-
-The package name is `idris2-pack-markdown`.
-
-To install it from Pack package collection, run:
-
-```sh
-pack install idris2-pack-markdown
-``` 
-
 ## Parsing and Rendering
 
 You can simply run `parse` to parse Markdown text:
